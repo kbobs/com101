@@ -58,11 +58,10 @@ def main():
             dict.append(food_item)
         elif options == '6':
             print("The number of items from each meal type:")
-            for item in dict:
-                input("Enter the meal type you would like to obtain a report for or enter 'all' to display a report"
-                      "for all 3 meal types.")
-                if input = 'Breakfast' or 'breakfast':
-                    print("Breakfast: {0}.".format(item["MTYPE"] = 'Breakfast'))
+            meal_type = input("Enter the meal type you would like to obtain a report for or enter 'all' to display a report"
+                    "for all 3 meal types.")
+            print("Normalized input = {0}".format(meal_type.lower()))
+
         elif options == '7':
             print("The saturated fat threshold compared to food items:")
         elif options == '8':

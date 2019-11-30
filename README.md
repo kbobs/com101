@@ -20,5 +20,35 @@ You should attempt to develop the following functionality using Python:
 
 • The user should remain within the program until they select a menu option to quit
 
+## Prerequisites
+
+* Python 3.7
+* Pip3
+* VirtualEnv
+
+## Configuring Python 3.7
+
+This software is developed using Python 3.7 using a virtual environment to
+manage Python versions.
+
+To configure the Virtual environment:
+
+```
+virtualenv venv
+```
+
+Activating the venv
+
+```
+source venv/bin/activate
+```
+
+## Debugging
+
+The Python debugger can be used to help during development of the software
+
+```
+python -m pdb coursework.py
+```
 
 
