@@ -8,22 +8,28 @@ import csv
 # Define the main function
 def main():
 
-    # Create a list to store the data from the file in
-    food_items = []
-    # Open a file named cw2file.txt
-    with open('food_items.txt') as f:
-        lines = f.read().splitlines()
-        for line in lines:
-            if line.strip()[0] == '#':
-                continue
+    # The program uses two lists - one for meals and one for food
+    meals = []
+    food = []
 
-            food_items.append(line)
-
-    dict = []
+    # Create a list to store the data from the file in.
+    infile = []
     with open('food_items.txt', newline='') as csvfile:
         reader = csv.DictReader(csvfile, skipinitialspace=True)
         for item in reader:
-            dict.append(item)
+          e = {}
+          e["TIME"] = item["TIME"]
+          e["MTYPE"] = item["MTYPE"]
+          e["DESC"] = item["DESC"]
+
+          for key, value in e:
+              e.setdefault(value, set()).add(key)
+
+          result = [key for key, values in enumerate()
+                    if len(values) > 1]
+          print("Item: {0}".format(item))
+          print("e: {0}".format(e))
+    exit(1)
 
     while True:
         print("\n\n------------------------------------------------------------")
